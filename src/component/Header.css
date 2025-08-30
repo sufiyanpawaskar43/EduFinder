@@ -1,0 +1,127 @@
+/* ===== Navbar Styling ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* logo on left, rest on right */
+  align-items: center;
+  padding: 12px 30px; /* balanced padding */
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1400;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===== Brand Logo ===== */
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #00c6ff, #0072ff, #2ecc71, #27ae60);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  animation: gradientFlow 6s ease infinite;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+/* Animate Gradient Flow */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Book 📖 Emoji Animation */
+.navbar-brand .emoji {
+  font-size: 2rem;
+  animation: bounce 2s infinite ease-in-out, glow 2s infinite alternate;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #00c6ff, 0 0 15px #0072ff; }
+  100% { text-shadow: 0 0 15px #2ecc71, 0 0 30px #27ae60; }
+}
+
+/* ===== Navigation Links ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #00c6ff, #27ae60);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-link:hover {
+  color: #0072ff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active Nav Link */
+.nav-link.active {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ===== Premium Button ===== */
+.btn-success {
+  background: linear-gradient(135deg, #27ae60, #2ecc71, #00c6ff);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
+}
+
+.btn-success:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 8px 18px rgba(39, 174, 96, 0.6);
+  background: linear-gradient(135deg, #2ecc71, #27ae60, #0072ff);
+}

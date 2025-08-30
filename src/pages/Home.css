@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f9fafc;
+  color: #333;
+}
+
+/* Hero Section */
+/* Hero Section Styles */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 8%;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+/* Hero Content Styles */
+.hero-content {
+  flex: 1;
+  max-width: 500px; /* Limits the width of the content */
+}
+
+.hero h1 {
+  font-size: 3rem; /* Main heading size */
+  line-height: 1.2; /* Line height for better readability */
+}
+
+.hero h1 span {
+  color: #ffd369; /* Highlighted text color */
+}
+
+.hero-para {
+  margin: 1rem 0 2rem; /* Margin for paragraph spacing */
+  font-size: 1.2rem; /* Paragraph font size */
+}
+
+/* Button Styles */
+.btn-primary {
+  padding: 0.8rem 1.8rem; /* Button padding */
+  background: #ffd369; /* Button background color */
+  color: #222; /* Button text color */
+  border: none; /* No border */
+  border-radius: 30px; /* Rounded corners */
+  font-size: 1rem; /* Button font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.btn-primary:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Hero Image Styles */
+.hero-image {
+  flex: 1; /* Allows the image section to take available space */
+  display: flex;
+  justify-content: center; /* Center the image */
+}
+
+.hero-image img {
+  max-width: 400px; /* Maximum width for the image */
+  border-radius: 20px; /* Rounded corners for the image */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Shadow effect */
+}
+
+
+/* Features Section */
+.features {
+  padding: 4rem 8%;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.feature {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-8px);
+}
+
+.feature i {
+  font-size: 2rem;
+  color: #4facfe;
+  margin-bottom: 1rem;
+}
+
+/* Stats Section */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 8%;
+  background: #eef7ff;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.stat {
+  margin: 1rem;
+}
+
+.stat h2 {
+  font-size: 2.5rem;
+  color: #4facfe;
+}
+
+.stat p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 4rem 8%;
+  background: #fff;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial {
+  background: #f4f9ff;
+  padding: 1.8rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-style: italic;
+}
+
+.testimonial h4 {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* CTA Section */
+.cta {
+  padding: 4rem 8%;
+  text-align: center;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  border-radius: 20px;
+  margin: 3rem auto;
+  max-width: 900px;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-secondary {
+  padding: 0.8rem 1.8rem;
+  background: #ffd369;
+  color: #222;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .hero-image img {
+    max-width: 280px;
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
